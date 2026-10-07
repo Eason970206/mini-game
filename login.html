@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>玩家登入 - 多方戰術對決</title>
+    <title>玩家登入 - 多人戰術對決</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
@@ -34,8 +34,8 @@
                 <div class="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-slate-800 border border-slate-700 text-rose-500 mb-2 shadow-inner">
                     <i class="fa-solid fa-gamepad text-3xl"></i>
                 </div>
-                <h1 class="text-2xl font-black text-white tracking-wider">玩家戰術登入門戶</h1>
-                <p class="text-xs text-slate-400">請選擇您的身份並輸入 GM 提供之專屬 PIN 碼</p>
+                <h1 class="text-2xl font-black text-white tracking-wider">玩家登入</h1>
+                <p class="text-xs text-slate-400">請選擇您的身份並輸入 中控 提供之專屬 PIN 碼</p>
             </div>
 
             <form id="login-form" onsubmit="handleLogin(event)" class="space-y-5 relative z-10">
@@ -80,7 +80,7 @@
             <div class="text-center space-y-1">
                 <i class="fa-solid fa-user-shield text-amber-400 text-3xl mb-1"></i>
                 <h3 class="text-xl font-black text-white">GM 控制台登入</h3>
-                <p class="text-xs text-slate-400">請輸入管理員通行密碼 (預設：8888)</p>
+                <p class="text-xs text-slate-400">請輸入管理員通行密碼</p>
             </div>
 
             <form onsubmit="handleGMLogin(event)" class="space-y-4">
@@ -101,7 +101,7 @@
     </div>
 
     <footer class="p-4 text-center text-slate-600 text-xs">
-        三方/多方對決策略猜拳 Tactical RPS System &copy; 2026
+        多人對決策略猜拳 Tactical RPS System &copy; 2026
     </footer>
 
     <script>
@@ -160,7 +160,7 @@
                 sessionStorage.setItem('rps_auth_pid', selectedPid);
                 window.location.href = "player.html";
             } else {
-                showError("PIN 碼不正確，請向 GM 確認！");
+                showError("PIN 碼不正確，請向 中控 確認！");
             }
         }
 
